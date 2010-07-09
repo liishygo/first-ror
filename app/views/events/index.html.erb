@@ -1,0 +1,16 @@
+<ul>
+<% @events.each do |event| %>
+	<li>
+		<%#= link_to(event.name, event_path(event)) %>
+		<%= link_to(event.name, event_path(event))%>
+		<%#= link_to('edit', :controller => 'events', :action => 'edit', :id => event) %>
+		<%= link_to('edit', edit_event_path(event)) %>
+		<%#= link_to('delete', :controller => 'events', :action => 'destroy', :id => event) %>
+		<%= link_to('delete', event_path(event), :method => :delete )%>
+	</li>
+<% end %>
+</ul>
+<%#= link_to ('new event', :controller => 'events', :action => 'new') %>
+<%= link_to('new event', new_event_path) %>
+<%= link_to ('first_event', "/first_event") %>
+		
